@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar'
 import './globals.css'
 export const metadata = {
   title: '당근마켓',
@@ -11,7 +12,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
