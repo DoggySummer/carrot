@@ -9,7 +9,7 @@ const page = () => {
   const [password, setPassword] = useState('')
   
   /** 회원가입 */
-  const signin = () => {
+  const signUp = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user
@@ -36,7 +36,7 @@ const page = () => {
       회원가입입니다
       <input type='text' placeholder='id' onChange={(e)=>setEmail(e.target.value)} value={email}/>
       <input type='text' placeholder='비번' onChange={(e)=>setPassword(e.target.value)} value={password}/>
-      <button onClick={signin}>회원가입 버튼</button>
+      <button onClick={signUp}>회원가입 버튼</button>
       <button onClick={signout}>로그아웃 버튼</button>
     </div>
   )
